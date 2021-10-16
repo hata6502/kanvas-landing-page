@@ -2,7 +2,7 @@ baseURL = "https://kanvas.b-hood.site/"
 languageCode = "en-us"
 title = "kanvas"
 theme = "minimal"
-googleAnalytics = ""
+googleAnalytics = "UA-106651880-7"
 
 [markup]
     [markup.goldmark]

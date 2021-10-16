@@ -1,4 +1,4 @@
-const cacheName = "v3";
+const cacheName = "v4";
 const requests = ["https://cdn.jsdelivr.net/npm/kanvas-dialog@latest", "."];
 
 // eslint-disable-next-line no-restricted-globals
