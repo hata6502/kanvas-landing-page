@@ -1,0 +1,41 @@
+baseURL = "https://kanvas.b-hood.site/"
+languageCode = "en-us"
+title = "kanvas"
+theme = "minimal"
+googleAnalytics = ""
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+[params]
+    author = "Tomoyuki Hata"
+    description = "A sketching canvas"
+    githubUsername = "#hata6502"
+    accent = "black"
+    showBorder = true
+    backgroundColor = "white"
+    font = "Raleway" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "default"
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+
+# Social icons to be shown on the right-hand side of the navigation bar.
+# The "name" field should match the name of the icon in Font Awesome.
+# The list of available icons can be found at http://fontawesome.io/icons.
+
+[[menu.icon]]
+    url = "https://twitter.com/kanvas_bh"
+    name = "fab fa-twitter"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://scrapbox.io/hata6502/kanvas"
+    name = "fas fa-file-alt"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://github.com/hata6502/kanvas"
+    name = "fab fa-github"
+    weight = 3
