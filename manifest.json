@@ -2,7 +2,7 @@
   "lang": "en-US",
   "name": "kanvas",
   "short_name": "kanvas",
-  "description": "A sketching canvas.",
+  "description": "Minimal sketching canvas.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
