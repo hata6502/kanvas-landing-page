@@ -1,4 +1,7 @@
-&nbsp;
+---
+title: kanvas
+description: A sketching canvas.
+---
 
 <style>
   .intro {
@@ -22,6 +25,8 @@
     font-size: x-large;
   }
 </style>
+
+&nbsp;
 
 <div id="action-container">
   <button id="open-kanvas-button">Open kanvas</button>
