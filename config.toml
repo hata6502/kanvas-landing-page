@@ -31,8 +31,8 @@ googleAnalytics = "UA-106651880-7"
     weight = 1
 
 [[menu.icon]]
-    url = "https://scrapbox.io/hata6502/kanvas"
-    name = "fas fa-file-alt"
+    url = "https://helpfeel.com/hata6502/?kinds=kanvas"
+    name = "fas fa-question"
     weight = 2
 
 [[menu.icon]]
