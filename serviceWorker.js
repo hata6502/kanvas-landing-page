@@ -1,5 +1,5 @@
-const cacheName = "v6";
-const requests = ["https://cdn.jsdelivr.net/npm/kanvas-dialog@latest", "."];
+const cacheName = "v7";
+const requests = ["https://cdn.jsdelivr.net/npm/kanvas-dialog@5.0.0", "."];
 
 // eslint-disable-next-line no-restricted-globals
 const serviceWorker = self;
