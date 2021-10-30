@@ -59,7 +59,7 @@ Tweets by kanvas_bh
 </script>
 
 <script type="module">
-  import "https://cdn.jsdelivr.net/npm/kanvas-dialog@latest";
+  import "https://cdn.jsdelivr.net/npm/kanvas-dialog@5.0.0";
 
   const dialog = document.querySelector("#dialog");
   const openKanvasButton = document.querySelector("#open-kanvas-button");
