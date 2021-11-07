@@ -26,7 +26,7 @@ description: Minimal sketching canvas.
   }
 
   #tango-gacha-slot {
-    height: 240px;
+    height: 320px;
     margin-bottom: 32px;
     margin-top: 32px;
     width: 100%;
