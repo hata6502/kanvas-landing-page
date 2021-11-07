@@ -39,3 +39,8 @@ googleAnalytics = "UA-106651880-7"
     url = "https://github.com/hata6502/kanvas"
     name = "fab fa-github"
     weight = 3
+
+[[menu.icon]]
+    url = "https://github.com/sponsors/hata6502"
+    name = "fas fa-heart"
+    weight = 4
