@@ -4,7 +4,7 @@
   "short_name": "kanvas",
   "description": "Minimal sketching canvas.",
   "start_url": ".",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#ffffff",
   "orientation": "landscape",
   "theme_color": "#ffffff",
