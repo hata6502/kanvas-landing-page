@@ -8,6 +8,10 @@ description: Minimal sketching canvas.
     transform: unset;
   }
 
+  .navbar-fixed-bottom, .navbar-fixed-top {
+    position: absolute;
+  }
+
   #action-container {
     display: flex;
     align-items: center;
