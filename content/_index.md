@@ -40,6 +40,7 @@ description: Minimal sketching canvas.
 &nbsp;
 
 <div id="action-container">
+  We recommend to install the application for drawing on Smartphone.
   <button id="open-kanvas-button">Open kanvas</button>
 
 <a

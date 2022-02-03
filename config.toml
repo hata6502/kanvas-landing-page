@@ -31,7 +31,7 @@ googleAnalytics = "UA-106651880-7"
     weight = 1
 
 [[menu.icon]]
-    url = "https://helpfeel.com/hata6502/?kinds=kanvas"
+    url = "https://helpfeel.com/hata6502/?q=kanvas"
     name = "fas fa-question"
     weight = 2
 
