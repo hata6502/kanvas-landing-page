@@ -1,5 +1,5 @@
-const cacheName = "v20";
-const requests = [".", "./kanvas-dialog.js"];
+const cacheName = "v21";
+const requests = [".", "./kanvas-dialog.js", "./text-fragment-injection.min.mjs"];
 
 // eslint-disable-next-line no-restricted-globals
 const serviceWorker = self;
