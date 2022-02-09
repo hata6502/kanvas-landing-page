@@ -124,7 +124,7 @@ Tweets by kanvas_bh
         linkElement.innerHTML = `
           <img
            src="https://i.gyazo.com/8737dd05a68d04d808dfdb81c6783be1.png"
-           style="vertical-align: text-bottom; width: 18px; "
+           style="opacity: 0.5; vertical-align: text-bottom; width: 18px; "
           />
         `;
 

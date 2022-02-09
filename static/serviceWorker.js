@@ -1,4 +1,4 @@
-const cacheName = "v22";
+const cacheName = "v23";
 
 const requests = [
   "https://unpkg.com/text-fragments-polyfill/src/text-fragment-utils.js",
