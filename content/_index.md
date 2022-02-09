@@ -40,7 +40,7 @@ description: Minimal sketching canvas.
 &nbsp;
 
 <div id="action-container">
-  We recommend to install the application for drawing on Smartphone.
+  <span>We recommend to install the application for drawing on Smartphone.</span>
   <button id="open-kanvas-button">Open kanvas</button>
 
 <a
@@ -97,5 +97,43 @@ Tweets by kanvas_bh
 
   openKanvasButton.addEventListener("click",
     (event) => dialog.setAttribute("open", "")
+  );
+</script>
+
+<script type="module">
+  import { injectByTextFragments } from "./text-fragment-injection.min.mjs";
+
+  const injectionConfigs = [
+    {
+      textFragments: ["We%20recommend%20to%20install%20the%20application%20for%20drawing%20on%20Smartphone."],
+      href: "https://helpfeel.com/hata6502/kanvas%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c",
+    },
+  ];
+
+  injectByTextFragments(
+    injectionConfigs.map(({ textFragments, href }) => ({
+      textFragments,
+      inject: (range) => {
+        const linkElement = document.createElement("a");
+
+        linkElement.href = href;
+        linkElement.rel = "noopener";
+        linkElement.target = "_blank";
+        linkElement.style.textDecoration = "none";
+
+        linkElement.innerHTML = `
+          <img
+           src="https://i.gyazo.com/8737dd05a68d04d808dfdb81c6783be1.png"
+           style="vertical-align: text-bottom; width: 18px; "
+          />
+        `;
+
+        range.collapse();
+        range.insertNode(linkElement);
+
+        return linkElement;
+      },
+      cleanUp: (linkElement) => linkElement.remove(),
+    }))
   );
 </script>
