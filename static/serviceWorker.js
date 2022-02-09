@@ -1,5 +1,11 @@
-const cacheName = "v21";
-const requests = [".", "./kanvas-dialog.js", "./text-fragment-injection.min.mjs"];
+const cacheName = "v22";
+
+const requests = [
+  "https://unpkg.com/text-fragments-polyfill/src/text-fragment-utils.js",
+  ".",
+  "./kanvas-dialog.js",
+  "./text-fragment-injection.min.mjs",
+];
 
 // eslint-disable-next-line no-restricted-globals
 const serviceWorker = self;
