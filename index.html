@@ -32,18 +32,21 @@
     (event) => dialog.setAttribute("open", "")
   );
 </script><script type=module>
-  import { injectByTextFragments } from "./text-fragment-injection.min.mjs";
+  import { injectByTextQuote } from "./text-quote-injection.js";
 
   const injectionConfigs = [
     {
-      textFragments: ["We%20recommend%20to%20install%20the%20application%20for%20drawing%20on%20Smartphone."],
+      selector: {
+        type: 'TextQuoteSelector',
+        exact: 'We recommend to install the application for drawing on Smartphone.',
+      },
       href: "https://helpfeel.com/hata6502/kanvas%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c",
     },
   ];
 
-  injectByTextFragments(
-    injectionConfigs.map(({ textFragments, href }) => ({
-      textFragments,
+  injectByTextQuote(
+    injectionConfigs.map(({ selector, href }) => ({
+      selector,
       inject: (range) => {
         const linkElement = document.createElement("a");
 
