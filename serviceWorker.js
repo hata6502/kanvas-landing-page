@@ -1,4 +1,4 @@
-const cacheName = "v26";
+const cacheName = "v27";
 
 const requests = [
   ".",
