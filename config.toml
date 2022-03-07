@@ -11,7 +11,7 @@ googleAnalytics = "UA-106651880-7"
 
 [params]
     author = "Tomoyuki Hata"
-    description = "Minimal sketching canvas"
+    description = "Minimal sketching canvas for anyone"
     githubUsername = "#hata6502"
     accent = "black"
     showBorder = true

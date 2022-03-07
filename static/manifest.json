@@ -2,7 +2,7 @@
   "lang": "en-US",
   "name": "kanvas",
   "short_name": "kanvas",
-  "description": "Minimal sketching canvas.",
+  "description": "Minimal sketching canvas for anyone.",
   "start_url": ".",
   "display": "fullscreen",
   "background_color": "#ffffff",

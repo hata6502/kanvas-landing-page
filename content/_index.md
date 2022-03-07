@@ -1,6 +1,6 @@
 ---
 title: kanvas
-description: Minimal sketching canvas.
+description: Minimal sketching canvas for anyone.
 ---
 
 <style>
