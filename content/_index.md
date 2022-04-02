@@ -78,12 +78,6 @@ Tweets by kanvas_bh
   const dialog = document.querySelector("#dialog");
   const openKanvasButton = document.querySelector("#open-kanvas-button");
 
-  const image = localStorage.getItem("kanvas-image");
-
-  if (image) {
-    dialog.setAttribute("src", image);
-  }
-
   dialog.addEventListener("kanvasClose",
     (event) => dialog.removeAttribute("open")
   );
@@ -95,8 +89,19 @@ Tweets by kanvas_bh
     )
   );
 
+  const image = localStorage.getItem("kanvas-image");
+
   openKanvasButton.addEventListener("click",
-    (event) => dialog.setAttribute("open", "")
+    (event) => {
+      dialog.setAttribute("open", "");
+
+      // 画面回転とフルスクリーンを待つ。
+      setTimeout(() => {
+        if (image) {
+          dialog.setAttribute("src", image);
+        }
+      }, 200);
+    }
   );
 </script>
 
