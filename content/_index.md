@@ -40,7 +40,19 @@ description: Minimal sketching canvas for anyone.
 &nbsp;
 
 <div id="action-container">
-  <span>We recommend to install the application for drawing on Smartphone.</span>
+  <span>We recommend to install the application for drawing on Smartphone.
+    <a
+      href="https://helpfeel.com/hata6502/kanvas%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c"
+      rel="noopener"
+      target="_blank"
+      style="text-decoration: none; "
+    >
+      <img
+        src="https://i.gyazo.com/8737dd05a68d04d808dfdb81c6783be1.png"
+        style="opacity: 0.5; vertical-align: text-bottom; width: 18px; "
+      />
+    </a>
+  </span>
   <button id="open-kanvas-button">Open kanvas</button>
 
 <a
@@ -99,46 +111,5 @@ Tweets by kanvas_bh
         dialog.setAttribute("src", image);
       }
     }
-  );
-</script>
-
-<script type="module">
-  import { injectByTextQuote } from "./text-quote-injection.js";
-
-  const injectionConfigs = [
-    {
-      selector: {
-        type: 'TextQuoteSelector',
-        exact: 'We recommend to install the application for drawing on Smartphone.',
-      },
-      href: "https://helpfeel.com/hata6502/kanvas%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c",
-    },
-  ];
-
-  injectByTextQuote(
-    injectionConfigs.map(({ selector, href }) => ({
-      selector,
-      inject: (range) => {
-        const linkElement = document.createElement("a");
-
-        linkElement.href = href;
-        linkElement.rel = "noopener";
-        linkElement.target = "_blank";
-        linkElement.style.textDecoration = "none";
-
-        linkElement.innerHTML = `
-          <img
-           src="https://i.gyazo.com/8737dd05a68d04d808dfdb81c6783be1.png"
-           style="opacity: 0.5; vertical-align: text-bottom; width: 18px; "
-          />
-        `;
-
-        range.collapse();
-        range.insertNode(linkElement);
-
-        return linkElement;
-      },
-      cleanUp: (linkElement) => linkElement.remove(),
-    }))
   );
 </script>
