@@ -95,12 +95,12 @@ Tweets by kanvas_bh
     (event) => {
       dialog.setAttribute("open", "");
 
-      // 画面回転とフルスクリーンを待つ。
+      // 画面回転を待つ。
       setTimeout(() => {
         if (image) {
           dialog.setAttribute("src", image);
         }
-      }, 200);
+      }, 500);
     }
   );
 </script>
