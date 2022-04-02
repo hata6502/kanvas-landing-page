@@ -95,12 +95,9 @@ Tweets by kanvas_bh
     (event) => {
       dialog.setAttribute("open", "");
 
-      // 画面回転を待つ。
-      setTimeout(() => {
-        if (image) {
-          dialog.setAttribute("src", image);
-        }
-      }, 500);
+      if (image) {
+        dialog.setAttribute("src", image);
+      }
     }
   );
 </script>
