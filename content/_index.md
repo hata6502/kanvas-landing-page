@@ -101,15 +101,17 @@ Tweets by kanvas_bh
     )
   );
 
-  const image = localStorage.getItem("kanvas-image");
-
   openKanvasButton.addEventListener("click",
     (event) => {
-      dialog.setAttribute("open", "");
+      const image = localStorage.getItem("kanvas-image");
 
       if (image) {
         dialog.setAttribute("src", image);
+      } else {
+        dialog.removeAttribute("src");
       }
+
+      dialog.setAttribute("open", "");
     }
   );
 </script>
