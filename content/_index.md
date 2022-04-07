@@ -28,13 +28,6 @@ description: Minimal sketching canvas for anyone.
     border-radius: 4px;
     font-size: x-large;
   }
-
-  #tango-gacha-slot {
-    height: 320px;
-    margin-bottom: 32px;
-    margin-top: 32px;
-    width: 100%;
-  }
 </style>
 
 &nbsp;
@@ -63,8 +56,6 @@ Tweet #kanvas
 </a>
 
 </div>
-
-<iframe id="tango-gacha-slot" src="https://tango-gacha.com/slot/"></iframe>
 
 <a
   class="twitter-timeline"
