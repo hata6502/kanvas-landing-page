@@ -1,6 +1,11 @@
-const cacheName = "v56";
+const cacheName = "v57";
 
-const requests = [".", "./premy/index.js"];
+const requests = [
+  "https://fonts.googleapis.com/css?family=Dancing+Script|Fruktur|Hachi+Maru+Pop|Potta+One",
+  "",
+  "/css/main.css",
+  "/premy/index.js",
+];
 
 // eslint-disable-next-line no-restricted-globals
 const serviceWorker = self;
