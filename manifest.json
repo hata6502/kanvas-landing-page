@@ -1,7 +1,7 @@
 {
   "lang": "en-US",
-  "name": "kanvas",
-  "short_name": "kanvas",
+  "name": "premy",
+  "short_name": "premy",
   "description": "Minimal sketching canvas for anyone.",
   "start_url": ".",
   "display": "fullscreen",
