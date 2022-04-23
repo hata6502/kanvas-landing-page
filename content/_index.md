@@ -1,5 +1,5 @@
 ---
-title: kanvas
+title: premy
 description: Minimal sketching canvas for anyone.
 ---
 
@@ -19,7 +19,7 @@ description: Minimal sketching canvas for anyone.
     gap: 16px;
   }
 
-  #open-kanvas-button {
+  #open-premy-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -35,7 +35,7 @@ description: Minimal sketching canvas for anyone.
 <div id="action-container">
   <span>We recommend to install the application for drawing on Smartphone.
     <a
-      href="https://helpfeel.com/hata6502/kanvas%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c"
+      href="https://helpfeel.com/hata6502/premy%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c"
       rel="noopener"
       target="_blank"
       style="text-decoration: none; "
@@ -46,13 +46,13 @@ description: Minimal sketching canvas for anyone.
       />
     </a>
   </span>
-  <button id="open-kanvas-button">Open kanvas</button>
+  <button id="open-premy-button">Open premy</button>
 
 <a
-  href="https://twitter.com/intent/tweet?button_hashtag=kanvas&ref_src=twsrc%5Etfw"
+  href="https://twitter.com/intent/tweet?button_hashtag=premy&ref_src=twsrc%5Etfw"
   class="twitter-hashtag-button"
   data-show-count="false">
-Tweet #kanvas
+Tweet #premy
 </a>
 
 </div>
@@ -61,11 +61,11 @@ Tweet #kanvas
   class="twitter-timeline"
   data-width="700"
   data-theme="light"
-  href="https://twitter.com/kanvas_bh?ref_src=twsrc%5Etfw">
-Tweets by kanvas_bh
+  href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw">
+Tweets by premy_draw
 </a>
 
-<kanvas-dialog id="dialog"></kanvas-dialog>
+<premy-dialog id="dialog"></premy-dialog>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -76,25 +76,25 @@ Tweets by kanvas_bh
 </script>
 
 <script type="module">
-  import "./kanvas-dialog.js";
+  import "./premy/index.js";
 
   const dialog = document.querySelector("#dialog");
-  const openKanvasButton = document.querySelector("#open-kanvas-button");
+  const openPremyButton = document.querySelector("#open-premy-button");
 
-  dialog.addEventListener("kanvasClose",
+  dialog.addEventListener("premyClose",
     (event) => dialog.removeAttribute("open")
   );
 
-  dialog.addEventListener("kanvasHistoryChange", (event) =>
+  dialog.addEventListener("premyHistoryChange", (event) =>
     localStorage.setItem(
-      "kanvas-image",
+      "premy-image",
       event.detail.history[event.detail.historyIndex]
     )
   );
 
-  openKanvasButton.addEventListener("click",
+  openPremyButton.addEventListener("click",
     (event) => {
-      const image = localStorage.getItem("kanvas-image");
+      const image = localStorage.getItem("premy-image");
 
       if (image) {
         dialog.setAttribute("src", image);

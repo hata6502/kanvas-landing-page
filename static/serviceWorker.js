@@ -1,9 +1,6 @@
 const cacheName = "v56";
 
-const requests = [
-  ".",
-  "./kanvas-dialog.js",
-];
+const requests = [".", "./premy/index.js"];
 
 // eslint-disable-next-line no-restricted-globals
 const serviceWorker = self;
