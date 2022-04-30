@@ -1,6 +1,6 @@
 ---
 title: premy
-description: Minimal sketching canvas for anyone.
+description: A drawing app for anyone.
 ---
 
 <style>
@@ -33,7 +33,7 @@ description: Minimal sketching canvas for anyone.
 &nbsp;
 
 <div id="action-container">
-  <span>We recommend to install the application for drawing on Smartphone.
+  <span>We recommend to install the application.
     <a
       href="https://helpfeel.com/hata6502/premy%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c"
       rel="noopener"

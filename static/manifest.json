@@ -2,11 +2,10 @@
   "lang": "en-US",
   "name": "premy",
   "short_name": "premy",
-  "description": "Minimal sketching canvas for anyone.",
+  "description": "A drawing app for anyone. ",
   "start_url": ".",
   "display": "fullscreen",
   "background_color": "#ffffff",
-  "orientation": "landscape",
   "theme_color": "#ffffff",
   "icons": [
     {
