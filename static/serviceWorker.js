@@ -1,4 +1,4 @@
-const cacheName = "v63";
+const cacheName = "v64";
 
 const requests = [
   "https://fonts.googleapis.com/css?family=Dancing+Script|Fruktur|Hachi+Maru+Pop|Potta+One",
