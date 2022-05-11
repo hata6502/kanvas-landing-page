@@ -1,4 +1,4 @@
-const cacheName = "v65";
+const cacheName = "v66";
 
 const requests = [
   "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
@@ -13,7 +13,6 @@ const requests = [
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
   "https://fonts.googleapis.com/css?family=Dancing+Script|Fruktur|Hachi+Maru+Pop|Potta+One",
   "https://fonts.googleapis.com/css?family=Raleway",
-  "https://i.gyazo.com/8737dd05a68d04d808dfdb81c6783be1.png",
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css",
   "/",
