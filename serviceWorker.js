@@ -1,4 +1,4 @@
-const cacheName = "v69";
+const cacheName = "v71";
 
 const requests = [
   "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
@@ -20,7 +20,7 @@ const requests = [
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/extensions/MathMenu.js?V=2.7.5",
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/extensions/MathZoom.js?V=2.7.5",
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
-  "https://fonts.googleapis.com/css?family=Dancing+Script|Fruktur|Hachi+Maru+Pop|Potta+One",
+  "https://fonts.googleapis.com/css?family=Dancing+Script|Fruktur|Hachi+Maru+Pop|Noto+Emoji|Potta+One",
   "https://fonts.googleapis.com/css?family=Raleway",
   "https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2",
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
