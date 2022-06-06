@@ -1,4 +1,4 @@
-const cacheName = "v72";
+const cacheName = "v73";
 
 const requests = [
   "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
@@ -49,6 +49,8 @@ serviceWorker.addEventListener("activate", (event) => {
           await caches.delete(key);
         })
       );
+
+      await serviceWorker.clients.claim();
     })()
   );
 });
@@ -74,7 +76,8 @@ serviceWorker.addEventListener("install", (event) => {
     (async () => {
       const cache = await caches.open(cacheName);
 
-      return cache.addAll(requests);
+      await cache.addAll(requests);
+      await serviceWorker.skipWaiting();
     })()
   );
 });
