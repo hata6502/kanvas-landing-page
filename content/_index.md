@@ -59,7 +59,6 @@ Tweet #premy
 
 <a
   class="twitter-timeline"
-  data-width="700"
   data-theme="light"
   href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw">
 Tweets by premy_draw
