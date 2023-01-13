@@ -1,4 +1,4 @@
-const cacheName = "v80";
+const cacheName = "v81";
 
 const requests = [
   "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
