@@ -3,6 +3,10 @@ title: premy
 description: A drawing app for anyone.
 ---
 
+<script type="module">
+  import "https://cdn.jsdelivr.net/npm/premy@8.14.2";
+<script>
+
 <style>
   .intro {
     transform: unset;
@@ -75,8 +79,6 @@ Tweets by premy_draw
 </script>
 
 <script type="module">
-  import "https://cdn.jsdelivr.net/npm/premy@latest";
-
   const dialog = document.querySelector("#dialog");
   const openPremyButton = document.querySelector("#open-premy-button");
 
