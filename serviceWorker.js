@@ -1,6 +1,11 @@
-const cacheName = "v81";
+const cacheName = "v82";
 
 const requests = [
+  "https://cdn.jsdelivr.net/npm/premy@8.14.2",
+  "/",
+  "/css/main.css",
+  "/favicon.png",
+  "/manifest.json",
   "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.ttf",
@@ -25,11 +30,6 @@ const requests = [
   "https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2",
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css",
-  "https://cdn.jsdelivr.net/npm/premy@latest",
-  "/",
-  "/css/main.css",
-  "/favicon.png",
-  "/manifest.json",
 ];
 
 // eslint-disable-next-line no-restricted-globals
