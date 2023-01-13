@@ -75,7 +75,7 @@ Tweets by premy_draw
 </script>
 
 <script type="module">
-  import "./premy/index.js";
+  import "https://cdn.jsdelivr.net/npm/premy@latest";
 
   const dialog = document.querySelector("#dialog");
   const openPremyButton = document.querySelector("#open-premy-button");
