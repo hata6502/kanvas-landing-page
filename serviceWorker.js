@@ -1,4 +1,4 @@
-const cacheName = "v79";
+const cacheName = "v80";
 
 const requests = [
   "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
@@ -25,11 +25,11 @@ const requests = [
   "https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2",
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css",
+  "https://cdn.jsdelivr.net/npm/premy@latest",
   "/",
   "/css/main.css",
   "/favicon.png",
   "/manifest.json",
-  "/premy/index.js",
 ];
 
 // eslint-disable-next-line no-restricted-globals
