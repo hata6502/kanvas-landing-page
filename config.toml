@@ -1,6 +1,6 @@
 baseURL = "https://premy.hata6502.com/"
 languageCode = "en-us"
-title = "premy - A drawing app for anyone. "
+title = "premy"
 theme = "minimal"
 googleAnalytics = "UA-106651880-7"
 
