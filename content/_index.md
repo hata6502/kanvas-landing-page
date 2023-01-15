@@ -1,6 +1,4 @@
 ---
-title: premy
-description: A drawing app for anyone.
 ---
 
 <script type="module">
