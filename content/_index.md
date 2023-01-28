@@ -70,19 +70,12 @@ Tweets by premy_draw
 <premy-dialog id="dialog"></premy-dialog>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<script type="module">
-  if ("serviceWorker" in navigator) {
-    await navigator.serviceWorker.register("./serviceWorker.js");
-  }
-</script>
-
 <script type="module">
   const dialog = document.querySelector("#dialog");
   const openPremyButton = document.querySelector("#open-premy-button");
 
-  dialog.addEventListener("premyClose",
-    (event) => dialog.removeAttribute("open")
+  dialog.addEventListener("premyClose", (event) =>
+    dialog.removeAttribute("open")
   );
 
   dialog.addEventListener("premyHistoryChange", (event) =>
@@ -92,17 +85,47 @@ Tweets by premy_draw
     )
   );
 
-  openPremyButton.addEventListener("click",
-    (event) => {
-      const image = localStorage.getItem("premy-image");
+  const handleOpenPremyButtonClick = () => {
+    const image = localStorage.getItem("premy-image");
 
-      if (image) {
-        dialog.setAttribute("src", image);
-      } else {
-        dialog.removeAttribute("src");
-      }
-
-      dialog.setAttribute("open", "");
+    if (image) {
+      dialog.setAttribute("src", image);
+    } else {
+      dialog.removeAttribute("src");
     }
-  );
+
+    dialog.setAttribute("open", "");
+  };
+
+  openPremyButton.addEventListener("click", handleOpenPremyButtonClick);
+
+  if ("serviceWorker" in navigator) {
+    await navigator.serviceWorker.register("./serviceWorker.js");
+
+    navigator.serviceWorker.addEventListener("message", async (event) => {
+      switch (event.data.type) {
+        case "load": {
+          const srcDataURL = await new Promise((resolve) => {
+            const fileReader = new FileReader();
+
+            fileReader.onload = () => {
+              resolve(this.result);
+            };
+
+            fileReader.readAsDataURL(event.data.src);
+          });
+
+          localStorage.setItem("premy-image", srcDataURL);
+          handleOpenPremyButtonClick();
+          break;
+        }
+
+        default: {
+          throw new Error(
+            `Unknown message type from serviceWorker: ${event.data.type}`
+          );
+        }
+      }
+    });
+  }
 </script>
