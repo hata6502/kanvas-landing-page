@@ -1,4 +1,4 @@
-const cacheName = "v85";
+const cacheName = "v84";
 
 const requests = [
   "https://cdn.jsdelivr.net/npm/premy@8.14.2",
@@ -56,21 +56,6 @@ serviceWorker.addEventListener("activate", (event) => {
 });
 
 serviceWorker.addEventListener("fetch", (event) => {
-  // Web Share Target
-  if (event.request.method === "POST") {
-    event.respondWith(
-      (async () => {
-        const client = await serviceWorker.clients.get(event.clientId);
-        const formData = await event.request.formData();
-        const src = formData.get("src");
-
-        client.postMessage({ type: "load", src });
-        return Response.redirect("/", 303);
-      })()
-    );
-    return;
-  }
-
   event.respondWith(
     (async () => {
       const cacheResponse = await caches.match(event.request);
