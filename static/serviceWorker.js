@@ -1,7 +1,7 @@
-const cacheName = "v84";
+const cacheName = "v85";
 
 const requests = [
-  "https://cdn.jsdelivr.net/npm/premy@8.14.2",
+  "https://cdn.jsdelivr.net/npm/premy@8.14.3",
   "/",
   "/css/main.css",
   "/favicon.png",
@@ -25,7 +25,7 @@ const requests = [
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/extensions/MathMenu.js?V=2.7.5",
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/extensions/MathZoom.js?V=2.7.5",
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
-  "https://fonts.googleapis.com/css?family=Dancing+Script|Fruktur|Hachi+Maru+Pop|Potta+One",
+  "https://fonts.googleapis.com/css?family=Noto+Color+Emoji|Dancing+Script|Fruktur|Hachi+Maru+Pop|Potta+One",
   "https://fonts.googleapis.com/css?family=Raleway",
   "https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2",
   "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
