@@ -3,7 +3,7 @@ title: premy - A drawing app for anyone.
 ---
 
 <script type="module">
-  import "https://cdn.jsdelivr.net/npm/premy@8.14.3";
+  import "https://cdn.jsdelivr.net/npm/premy@8.15.0";
 </script>
 
 <style>
