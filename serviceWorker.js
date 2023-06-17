@@ -1,7 +1,7 @@
-const cacheName = "v96";
+const cacheName = "v97";
 
 const requests = [
-  "https://cdn.jsdelivr.net/npm/premy@8.16.7",
+  "https://cdn.jsdelivr.net/npm/premy@8.16.8",
   "/",
   "/css/main.css",
   "/favicon.png",
