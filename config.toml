@@ -2,7 +2,7 @@ baseURL = "https://premy.hata6502.com/"
 languageCode = "en-us"
 title = "premy"
 theme = "minimal"
-googleAnalytics = "UA-106651880-7"
+googleAnalytics = ""
 
 [markup]
     [markup.goldmark]

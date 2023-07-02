@@ -1,4 +1,4 @@
-const cacheName = "v100";
+const cacheName = "v101";
 
 const requests = [
   "https://cdn.jsdelivr.net/npm/premy@8.17.0",
