@@ -31,41 +31,27 @@ title: premy - A drawing app for anyone.
     border-radius: 4px;
     font-size: x-large;
   }
+
+  #examples-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 </style>
 
 &nbsp;
 
 <div id="action-container">
-  <span>We recommend to install the application.
-    <a
-      href="https://helpfeel.com/hata6502/premy%20%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c"
-      rel="noopener"
-      target="_blank"
-      style="text-decoration: none; "
-    >
-      <img
-        src="https://i.gyazo.com/8737dd05a68d04d808dfdb81c6783be1.png"
-        style="opacity: 0.5; vertical-align: text-bottom; width: 18px; "
-      />
-    </a>
-  </span>
   <button id="open-premy-button">Open premy</button>
 
-<a
-  href="https://twitter.com/intent/tweet?button_hashtag=premy&ref_src=twsrc%5Etfw"
-  class="twitter-hashtag-button"
-  data-show-count="false">
-Tweet #premy
-</a>
+<a href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @premy_draw</a>
 
 </div>
 
-<a
-  class="twitter-timeline"
-  data-theme="light"
-  href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw">
-Tweets by premy_draw
-</a>
+<div id="examples-container"></div>
+
+---
 
 <premy-dialog id="dialog"></premy-dialog>
 
@@ -105,4 +91,29 @@ Tweets by premy_draw
       dialog.setAttribute("open", "");
     }
   );
+</script>
+
+<script type="module">
+  import examples from "./examples.json" assert { type: "json" };
+
+  const links =
+    [...examples.relatedPages.links1hop]
+    .sort(() => Math.random() - 0.5);
+  const examplesContainerElement = document.querySelector("#examples-container");
+
+  for (const { title, image } of links) {
+    const linkElement = document.createElement("a");
+    linkElement.href = `https://scrapbox.io/hata6502/${encodeURIComponent(title)}`;
+    linkElement.target = "_blank";
+    linkElement.style.borderBottom = "1px solid #337ab7";
+
+    const imageElement = document.createElement("img");
+    imageElement.alt = title;
+    imageElement.src = image;
+    imageElement.loading = "lazy";
+    imageElement.style.width = "224px";
+
+    linkElement.append(imageElement);
+    examplesContainerElement.append(linkElement);
+  }
 </script>
