@@ -36,15 +36,16 @@
 </script><script type=module>
   import examples from "./examples.json" assert { type: "json" };
 
-  const recentlyUpdatedLinks =
+  const links =
     [...examples.relatedPages.links1hop]
-    .sort((a, b) => b.updated - a.updated);
+    .sort(() => Math.random() - 0.5);
   const examplesContainerElement = document.querySelector("#examples-container");
 
-  for (const { title, image } of recentlyUpdatedLinks) {
+  for (const { title, image } of links) {
     const imageElement = document.createElement("img");
     imageElement.alt = title;
     imageElement.src = image;
+    imageElement.loading = "lazy";
     imageElement.style.width = "224px";
 
     examplesContainerElement.append(imageElement);
