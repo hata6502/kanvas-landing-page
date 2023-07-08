@@ -94,7 +94,11 @@ title: premy - A drawing app for anyone.
 </script>
 
 <script type="module">
-  import examples from "./examples.json" assert { type: "json" };
+  const examplesResponse = await fetch("./examples.json");
+  if (!examplesResponse.ok) {
+    throw new Error("Failed to fetch examples.json");
+  }
+  const examples = await examplesResponse.json();
 
   const links =
     [...examples.relatedPages.links1hop]
@@ -105,13 +109,13 @@ title: premy - A drawing app for anyone.
     const linkElement = document.createElement("a");
     linkElement.href = `https://scrapbox.io/hata6502/${encodeURIComponent(title)}`;
     linkElement.target = "_blank";
-    linkElement.style.borderBottom = "1px solid #337ab7";
 
     const imageElement = document.createElement("img");
     imageElement.alt = title;
     imageElement.src = image;
     imageElement.loading = "lazy";
     imageElement.style.width = "224px";
+    imageElement.style.borderBottom = "1px solid #337ab7";
 
     linkElement.append(imageElement);
     examplesContainerElement.append(linkElement);
