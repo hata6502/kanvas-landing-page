@@ -1,6 +1,6 @@
 <!doctype html><html lang=en-us><head><meta property="og:description" content="A drawing app for anyone. "><meta property="og:image" content="https://premy.hata6502.com/favicon.png"><meta property="og:title" content="premy"><meta property="og:type" content="website"><meta property="og:url" content="https://premy.hata6502.com/"><meta name=twitter:card content="summary"><link rel=apple-touch-icon href=favicon.png><link rel=icon type=image/png href=favicon.png><link rel=manifest href=manifest.json><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Noto+Color+Emoji|Dancing+Script|Fruktur|Hachi+Maru+Pop|Potta+One"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=10"><title>premy - A drawing app for anyone.</title><style>html body{font-family:raleway,sans-serif;background-color:#fff}:root{--accent:black;--border-width:5px}</style><link rel=stylesheet href=https://premy.hata6502.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Raleway"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin=anonymous><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js></script><script>hljs.initHighlightingOnLoad()</script><script src=https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script>$(document).on('click',function(){$('.collapse').collapse('hide')})</script><meta name=generator content="Hugo 0.85.0"><link href=/index.xml rel=alternate type=application/rss+xml title=premy><link href=/index.xml rel=feed type=application/rss+xml title=premy><script type=text/javascript async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></head><body><nav class="navbar navbar-default navbar-fixed-top"><div class=container><div class=navbar-header><button class=navbar-toggle data-target=.navbar-collapse data-toggle=collapse>
 <span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li class=navbar-icon><a href=https://twitter.com/premy_draw><i class="fab fa-twitter"></i></a></li><li class=navbar-icon><a href="https://helpfeel.com/hata6502/?q=premy"><i class="fas fa-question"></i></a></li><li class=navbar-icon><a href=https://github.com/hata6502/premy><i class="fab fa-github"></i></a></li><li class=navbar-icon><a href=https://github.com/sponsors/hata6502><i class="fas fa-heart"></i></a></li></ul></div></div></nav><main><div class=intro><h1>premy</h1><h2>A drawing app for anyone.</h2><div class="homepage-content text-justify"><script type=module>
-  import "https://cdn.jsdelivr.net/npm/premy@8.18.2";
+  import "https://cdn.jsdelivr.net/npm/premy@9.0.0";
 </script><style>.intro{transform:unset}.navbar-fixed-bottom,.navbar-fixed-top{position:absolute}#action-container{display:flex;align-items:center;flex-direction:column;gap:16px}#open-premy-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border:1px solid #000;border-radius:4px;font-size:x-large}#examples-container{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}</style><p> </p><div id=action-container><button id=open-premy-button>Open premy</button><p><a href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw" class=twitter-follow-button data-show-count=false>Follow @premy_draw</a></p></div><div id=examples-container></div><hr><p><premy-dialog id=dialog></premy-dialog></p><script async src=https://platform.twitter.com/widgets.js></script><script type=module>
   if ("serviceWorker" in navigator) {
     await navigator.serviceWorker.register("./serviceWorker.js");
@@ -9,30 +9,52 @@
   const dialog = document.querySelector("#dialog");
   const openPremyButton = document.querySelector("#open-premy-button");
 
-  dialog.addEventListener("premyClose",
-    (event) => dialog.removeAttribute("open")
-  );
+  dialog.addEventListener("premyClose", (event) => {
+    dialog.removeAttribute("open")
+  });
 
-  dialog.addEventListener("premyHistoryChange", (event) =>
-    localStorage.setItem(
-      "premy-image",
-      event.detail.history[event.detail.historyIndex]
-    )
-  );
+  openPremyButton.addEventListener("click", (event) => {
+    dialog.setAttribute("open", "");
+  });
 
-  openPremyButton.addEventListener("click",
-    (event) => {
-      const image = localStorage.getItem("premy-image");
+  const premyDBOpenRequest = indexedDB.open("premy", 1);
 
-      if (image) {
-        dialog.setAttribute("src", image);
-      } else {
-        dialog.removeAttribute("src");
+  premyDBOpenRequest.onsuccess = () => {
+    const premyDB = premyDBOpenRequest.result;
+
+    const transaction = premyDB.transaction(["etc"], "readonly");
+    const etcStore = transaction.objectStore("etc");
+    const historyGetRequest = etcStore.get("history");
+    historyGetRequest.onsuccess = () => {
+      const history = historyGetRequest.result;
+      if (!history) {
+        return;
       }
+      dialog.setAttribute("history", JSON.stringify(history));
+    };
 
-      dialog.setAttribute("open", "");
+    dialog.addEventListener("premyHistoryChange", (event) => {
+      const transaction = premyDB.transaction(["etc"], "readwrite");
+      const etcStore = transaction.objectStore("etc");
+      etcStore.put(event.detail.history, "history");
+    });
+  };
+
+  premyDBOpenRequest.onupgradeneeded = (event) => {
+    const premyDB = premyDBOpenRequest.result;
+    let version = event.oldVersion;
+
+    if (version === 0) {
+      const etcStore = premyDB.createObjectStore("etc");
+      const image = localStorage.getItem("premy-image");
+      if (image) {
+        etcStore.put([image], "history");
+      }
+      localStorage.removeItem("premy-image");
+
+      version++;
     }
-  );
+  };
 </script><script type=module>
   const examplesResponse = await fetch("./examples.json");
   if (!examplesResponse.ok) {
