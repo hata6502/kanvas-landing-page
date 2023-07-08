@@ -79,15 +79,17 @@ title: premy - A drawing app for anyone.
   premyDBOpenRequest.onsuccess = async () => {
     const premyDB = premyDBOpenRequest.result;
 
-    const transaction = premyDB.transaction(["history"], "readonly");
-    const historyStore = transaction.objectStore("history");
-    const historyGetAllRequest = historyStore.getAll();
-    await new Promise((resolve, reject) => {
-      historyGetAllRequest.onsuccess = resolve;
-      historyGetAllRequest.onerror = reject;
+    openButton.addEventListener("click", (event) => {
+      const transaction = premyDB.transaction(["history"], "readonly");
+      const historyStore = transaction.objectStore("history");
+      const historyGetAllRequest = historyStore.getAll();
+      await new Promise((resolve, reject) => {
+        historyGetAllRequest.onsuccess = resolve;
+        historyGetAllRequest.onerror = reject;
+      });
+      const history = historyGetAllRequest.result;
+      dialog.setHistory(history);
     });
-    const history = historyGetAllRequest.result;
-    dialog.setHistory(history);
 
     dialog.addEventListener("premyHistoryChange", async (event) => {
       const { historyMaxLength, pushed } = event.detail;
