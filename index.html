@@ -49,17 +49,15 @@
     const linkElement = document.createElement("a");
     linkElement.href = `https://scrapbox.io/hata6502/${encodeURIComponent(title)}`;
     linkElement.target = "_blank";
-    linkElement.style.borderBottom = "1px solid #337ab7";
 
     const imageElement = document.createElement("img");
     imageElement.alt = title;
     imageElement.src = image;
     imageElement.loading = "lazy";
     imageElement.style.width = "224px";
+    imageElement.style.borderBottom = "1px solid #337ab7";
 
     linkElement.append(imageElement);
     examplesContainerElement.append(linkElement);
-
-    await new Promise((resolve) => setTimeout(resolve, 100));
   }
 </script></div></div></main><footer><p class="copyright text-muted">© All rights reserved. Powered by <a href=https://gohugo.io>Hugo</a> and <a href=https://github.com/calintat/minimal>Minimal</a>.</p></footer></body></html>
