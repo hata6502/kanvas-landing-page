@@ -27,8 +27,9 @@ title: premy - A drawing app for anyone.
     background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 4px;
+    cursor: pointer;
     font-size: x-large;
-    cursor: "pointer",
+    padding: 0 4px;
   }
   #open-button:focus {
     outline: 2px solid #000000;
