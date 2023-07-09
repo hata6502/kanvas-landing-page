@@ -35,7 +35,7 @@ title: premy - A drawing app for anyone.
     outline: 2px solid #000000;
   }
   #open-button:hover {
-    background: #0a0a0a;
+    background: #333333;
   }
 
   #examples-container {
