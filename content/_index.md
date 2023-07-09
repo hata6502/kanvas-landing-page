@@ -23,13 +23,18 @@ title: premy - A drawing app for anyone.
   }
 
   #open-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    all: unset;
     background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 4px;
     font-size: x-large;
+    cursor: "pointer",
+  }
+  #open-button:focus {
+    outline: 2px solid #000000;
+  }
+  #open-button:hover {
+    background-color: #f5f5f5;
   }
 
   #examples-container {
