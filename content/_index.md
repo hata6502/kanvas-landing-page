@@ -65,13 +65,9 @@ title: premy - A drawing app for anyone.
 
 <script type="module">
   const dialog = document.querySelector("#dialog");
-
   const openButton = document.querySelector("#open-button");
   dialog.addEventListener("premyClose", () => {
     dialog.removeAttribute("open");
-  });
-  openButton.addEventListener("click", () => {
-    dialog.setAttribute("open", "");
   });
 
   const premyDBOpenRequest = indexedDB.open("premy", 2);
@@ -89,6 +85,7 @@ title: premy - A drawing app for anyone.
       });
       const history = historyGetAllRequest.result;
       dialog.setHistory(history);
+      dialog.setAttribute("open", "");
     });
 
     dialog.addEventListener("premyHistoryChange", async (event) => {
@@ -113,6 +110,12 @@ title: premy - A drawing app for anyone.
       for (const historyKey of removedHistoryKeys) {
         historyStore.delete(historyKey);
       }
+    });
+  };
+
+  premyDBOpenRequest.onerror = () => {
+    openButton.addEventListener("click", () => {
+      dialog.setAttribute("open", "");
     });
   };
 
