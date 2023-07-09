@@ -36,11 +36,6 @@ googleAnalytics = ""
     weight = 2
 
 [[menu.icon]]
-    url = "https://github.com/hata6502/premy"
-    name = "fab fa-github"
-    weight = 3
-
-[[menu.icon]]
     url = "https://github.com/sponsors/hata6502"
     name = "fas fa-heart"
-    weight = 4
+    weight = 3
