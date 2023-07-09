@@ -29,7 +29,7 @@ title: premy - A drawing app for anyone.
     color: #ffffff;
     cursor: pointer;
     font-size: x-large;
-    padding: 0 8px;
+    padding: 2px 8px;
   }
   #open-button:focus {
     outline: 2px solid #000000;
@@ -49,7 +49,7 @@ title: premy - A drawing app for anyone.
 &nbsp;
 
 <div id="action-container">
-  <button id="open-button">Open premy</button>
+  <button id="open-button">Open canvas</button>
 
 <a href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @premy_draw</a>
 
