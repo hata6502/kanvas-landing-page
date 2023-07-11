@@ -73,11 +73,8 @@ title: premy - A drawing app for anyone.
 
 <div id="action-container">
   <button id="open-button">Open canvas</button>
-
-<a id="install-button" href="https://help.hata6502.com/premy%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c" target="_blank"><button>Install app</button></a>
-
-<a href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @premy_draw</a>
-
+  <a id="install-button" href="https://help.hata6502.com/premy%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B-61818b0489e586002278f64c" target="_blank"><button>Install app</button></a>
+  <a href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @premy_draw</a>
 </div>
 
 <div id="examples-container"></div>
