@@ -19,7 +19,7 @@ title: premy - A drawing app for anyone.
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
     margin-bottom: 10px;
   }
 
