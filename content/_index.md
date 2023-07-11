@@ -40,12 +40,13 @@ title: premy - A drawing app for anyone.
   }
 
   #install-button {
+    display: none;
     color: unset;
     text-decoration: unset;
   }
-  @media (display-mode: standalone) {
+  @media (display-mode: browser) {
     #install-button {
-      display: none;
+      display: unset;
     }
   }
   #install-button button {
