@@ -19,8 +19,8 @@ title: premy - A drawing app for anyone.
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 
   #open-button {
@@ -78,9 +78,9 @@ title: premy - A drawing app for anyone.
   <a href="https://twitter.com/premy_draw?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @premy_draw</a>
 </div>
 
-<div id="examples-container"></div>
+&nbsp;
 
----
+<div id="examples-container"></div>
 
 <premy-dialog id="dialog"></premy-dialog>
 
