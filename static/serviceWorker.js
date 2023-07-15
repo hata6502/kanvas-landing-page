@@ -1,10 +1,9 @@
-const cacheName = "v120";
+const cacheName = "v121";
 
 const requests = [
   "https://cdn.jsdelivr.net/npm/premy@10.0.2",
   "/",
   "/css/main.css",
-  "/examples.json",
   "/favicon.png",
   "/manifest.json",
   "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js",
